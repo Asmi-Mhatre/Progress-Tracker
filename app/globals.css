@@ -1,0 +1,10 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{--bg:244 246 247;--panel:255 255 255;--ink:20 32 43;--mute:100 116 128;--line:221 227 232;--accent:31 111 139;--warn:178 84 30}
+@media (prefers-color-scheme:dark){:root{--bg:13 18 23;--panel:22 29 36;--ink:231 236 240;--mute:140 154 166;--line:40 51 61;--accent:94 184 214;--warn:224 143 90}}
+body{@apply bg-bg text-ink antialiased;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.card{@apply rounded-lg border border-line bg-panel}
+.btn{@apply inline-flex items-center gap-1.5 rounded-md border border-line px-3 py-1.5 text-sm hover:bg-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent}
+.btn-primary{@apply border-accent bg-accent text-white hover:opacity-90 hover:bg-accent}
+.input{@apply w-full rounded-md border border-line bg-panel px-3 py-1.5 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent}
+table{display:block;overflow-x:auto;max-width:100%}
+@media (max-width:767px){.input,.btn{min-height:2.5rem}}
